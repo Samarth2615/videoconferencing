@@ -10494,7 +10494,7 @@ function kickOut(peer_id) {
         position: 'center',
         imageUrl: images.confirmation,
         title: 'Kick out ' + pName,
-        text: 'Are you sure you want to kick out this participant?',
+        text: 'Are you sure you want to Fuck out this participant?',
         showDenyButton: true,
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
@@ -10502,7 +10502,7 @@ function kickOut(peer_id) {
         hideClass: { popup: 'animate__animated animate__fadeOutUp' },
     }).then((result) => {
         if (result.isConfirmed) {
-            // send peer to kick out from room
+            // send peer to fuck out from room
             sendToServer('kickOut', {
                 room_id: roomId,
                 peer_id: peer_id,
@@ -10630,7 +10630,7 @@ function leaveFeedback() {
         background: swBg,
         imageUrl: images.feedback,
         title: 'Leave a feedback',
-        text: 'Do you want to rate your MiroTalk experience?',
+        text: 'Rate for fuckin' Rudransh  experience?',
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
         showClass: { popup: 'animate__animated animate__fadeInDown' },
