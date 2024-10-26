@@ -1516,14 +1516,14 @@ async function whoAreYou() {
         allowOutsideClick: false,
         allowEscapeKey: false,
         background: swBg,
-        title: 'Friends Talk',
+        title: 'MiroTalk P2P',
         position: 'center',
         input: 'text',
-        inputPlaceholder: 'Enter your name',
+        inputPlaceholder: 'Enter your email or name',
         inputAttributes: { maxlength: 32, id: 'usernameInput' },
         inputValue: window.localStorage.peer_name ? window.localStorage.peer_name : '',
         html: initUser, // inject html
-        confirmButtonText: `Join`,
+        confirmButtonText: `Join meeting`,
         customClass: { popup: 'init-modal-size' },
         showClass: { popup: 'animate__animated animate__fadeInDown' },
         hideClass: { popup: 'animate__animated animate__fadeOutUp' },
@@ -10494,7 +10494,7 @@ function kickOut(peer_id) {
         position: 'center',
         imageUrl: images.confirmation,
         title: 'Kick out ' + pName,
-        text: 'Are you sure you want to Fuck out this participant?',
+        text: 'Are you sure you want to kick out this participant?',
         showDenyButton: true,
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
@@ -10502,7 +10502,7 @@ function kickOut(peer_id) {
         hideClass: { popup: 'animate__animated animate__fadeOutUp' },
     }).then((result) => {
         if (result.isConfirmed) {
-            // send peer to fuck out from room
+            // send peer to kick out from room
             sendToServer('kickOut', {
                 room_id: roomId,
                 peer_id: peer_id,
@@ -10630,7 +10630,7 @@ function leaveFeedback() {
         background: swBg,
         imageUrl: images.feedback,
         title: 'Leave a feedback',
-        text: 'Rate for fuckin' Rudransh  experience?',
+        text: 'Do you want to rate your MiroTalk experience?',
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
         showClass: { popup: 'animate__animated animate__fadeInDown' },
